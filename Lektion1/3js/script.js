@@ -3,8 +3,9 @@ window.onload = () => {
 };
 
 function search() {
+  let address = document.getElementById("searchField").value;
   fetch(
-    "https://api.dataforsyningen.dk/adgangsadresser?vejnavn=Rødkildevej"
+    "https://api.dataforsyningen.dk/adgangsadresser?vejnavn=" + address
   ).then((response) =>
     response.json().then((data) => {
       console.log(data);
