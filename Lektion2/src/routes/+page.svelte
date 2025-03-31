@@ -1,6 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
 	import Button from '$lib/Button.svelte';
+	import Input from '$lib/Input.svelte';
 
 	let userName = $state('');
 	let password = $state('');
@@ -15,11 +16,11 @@
 </script>
 
 <div>
-	<input bind:value={userName} placeholder="Brugernavn" />
+	<Input bind:value={userName} placeholder="Brugernavn" />
 </div>
 <div>
-	<input bind:value={password} placeholder="Kodeord" />
+	<Input bind:value={password} placeholder="Kodeord" />
 </div>
 <div>
-	<button onclick={btnclick}>Login</button>
+	<Button onclick={btnclick}>Login</Button>
 </div>
