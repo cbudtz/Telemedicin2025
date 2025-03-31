@@ -1,26 +1,25 @@
 <script>
+	import { goto } from '$app/navigation';
+	import Button from '$lib/Button.svelte';
+
 	let userName = $state('');
 	let password = $state('');
-	const onclick = () => {
-		if (userName === 'test' && password === 'test') {
-			alert('You are logged in');
+
+	const btnclick = () => {
+		if (userName === 'admin' && password === 'admin') {
+			goto('/home');
 		} else {
-			alert('You are not logged in');
+			alert('Login failed');
 		}
 	};
 </script>
 
-<div class="text-2xl">This is a page with a plus sign in the URL</div>
-<input
-	type="text"
-	class="rounded-md border border-gray-300 p-2"
-	placeholder="Type something here"
-	bind:value={userName}
-/>
-<input
-	type="password"
-	class="rounded-md border border-gray-300 p-2"
-	placeholder="Type something here"
-	bind:value={password}
-/>
-<button {onclick}>Click me</button>
+<div>
+	<input bind:value={userName} placeholder="Brugernavn" />
+</div>
+<div>
+	<input bind:value={password} placeholder="Kodeord" />
+</div>
+<div>
+	<button onclick={btnclick}>Login</button>
+</div>
