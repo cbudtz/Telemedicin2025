@@ -5,3 +5,4 @@
 
 <Title>Telemedicin 2025</Title>
 <Link href="/login">Login side</Link>
+<Link href="/diary">Dagbog</Link>
