@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import Title from '$lib/components/Title.svelte';
+	import Link from '$lib/components/Link.svelte';
+</script>
+
+<Title>Telemedicin 2025</Title>
+<Link href="/login">Login side</Link>
