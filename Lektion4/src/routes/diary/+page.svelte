@@ -1,7 +1,6 @@
 <script>
-	import { json } from '@sveltejs/kit';
+	
 	import { onMount } from 'svelte';
-	import { on } from 'svelte/events';
 
 	let diary = $state([]);
 	let title = $state('');
