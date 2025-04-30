@@ -6,7 +6,7 @@
 	let title = $state('');
 	let content = $state('');
 
-	const saveDiary = async (diary) => {
+	const saveDiary = async () => {
 		const response = await fetch('/api/diary/self', {
 			method: 'POST',
 			headers: {
