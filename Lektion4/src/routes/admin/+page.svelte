@@ -1,5 +1,7 @@
 <script>
-	import { createSubscriber } from 'svelte/reactivity';
+	import Title from '$lib/components/Title.svelte';
+	import Link from '$lib/components/Link.svelte';
+	import H1 from '$lib/components/H1.svelte';
 
 	let username = $state('user');
 	let password = $state('password');
@@ -23,13 +25,26 @@
 	};
 </script>
 
-<h1 class="text-2xl font-bold">Den hemmelige administratorside</h1>
-<div>
-	<input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
+<Title>Administration</Title>
+
+<div class="my-4">
+	<H1>Brugeradministration</H1>
+	<p>Her kan du oprette nye brugere til systemet.</p>
 </div>
-<div>
-	<input type="password" bind:value={password} placeholder="Adgangskode" class="input" />
+
+<div class="mb-4">
+	<input id="username" type="text" bind:value={username} placeholder="Indtast brugernavn" class="input" />
 </div>
-<div>
-	<button class="btn btn-primary" onclick={createUser}>Opret bruger</button>
+	
+<div class="mb-4">
+	<input id="password" type="password" bind:value={password} placeholder="Indtast adgangskode" class="input" />
 </div>
+	
+<div class="mb-4">
+	<button class="btn btn-primary" onclick={createUser}>Opret ny bruger</button>
+</div>
+
+<div class="mt-4">
+	<Link href="/diary">Tilbage til dagbog</Link>
+</div>
+
