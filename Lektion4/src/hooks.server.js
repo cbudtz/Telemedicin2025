@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'; // Import JWT library
 export async function handle({ event, resolve }) {
 	console.log(event.url.pathname);
 	const token = event.cookies.get('session');
-	if (['/', '/login', '/api/login'].includes(event.url.pathname)) {
+	if (['/', '/login', '/api/login', '/api/user'].includes(event.url.pathname)) {
 		return await resolve(event);
 	}
 	if (token) {
