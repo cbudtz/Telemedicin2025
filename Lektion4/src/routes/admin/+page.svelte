@@ -74,7 +74,7 @@
 <ul class="list rounded-box shadow-md">
 	{#each users as user}
 		<li class="list-row">
-			<p>{user.username}</p>
+			<p><a href={'users/' + user.id}> {user.username}</a></p>
 		</li>
 	{/each}
 </ul>
